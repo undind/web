@@ -1,4 +1,6 @@
 {
+  "packages": ["frontend/*", "frontend/ui/*", "frontend/utils/*"],
   "npmClient": "yarn",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "useWorkspaces": true
 }

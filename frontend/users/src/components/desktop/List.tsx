@@ -5,9 +5,10 @@ import { Space, Text } from '@ui/text'
 import messages from '../../messages'
 
 interface Props {
-  intl: InjectedIntl
+  intl: InjectedIntl,
+  rows: any
 }
-
+//TODO rows type
 const List = ({ rows, intl }: Props) => (
   <Column>
     <Layout basis={60} />
