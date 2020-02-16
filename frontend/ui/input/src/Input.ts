@@ -28,7 +28,7 @@ export interface InputProps extends InputElementProps {
 const InputElement = styled('input', {
   shouldForwardProp: prop =>
     !['borderColor', 'error', 'transparent', 'select'].includes(prop),
-})<WrapperElementProps>(
+})<InputElementProps>(
   ({ color, borderColor, theme }) => ({
     width: '100%',
     height: 40,

@@ -8,7 +8,15 @@ import { RouteLink } from '@ui/link'
 import messages from '../../messages'
 
 interface Props {
-  intl: InjectedIntl
+  intl: InjectedIntl,
+  confirmPassword: string,
+  email: string,
+  errors: any,
+  password: string,
+  onChangeConfirmPassword: any,
+  onChangeEmail: any,
+  onChangePassword: any,
+  onRegister: any,
 }
 
 const Registration = ({

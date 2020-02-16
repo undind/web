@@ -9,7 +9,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowJs": true,
-    "lib": ["es6"],
+    "lib": ["es6", "dom", "dom.iterable"],
     "jsx": "react",
     "resolveJsonModule": true,
     "esModuleInterop": true,
