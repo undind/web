@@ -23,7 +23,7 @@ const initialState: State = {
 export default createReducer(initialState, {
   [actions.change]: (state, { field, value }) => ({
     ...state,
-    field: value,
+    [field]: value,
     errors: {
       ...state.errors,
       [field]: '',

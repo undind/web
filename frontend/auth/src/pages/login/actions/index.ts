@@ -3,7 +3,7 @@ import { auth } from '@frontend/common/src/constants/security'
 import * as actions from '../constants'
 import stub from './stub'
 
-export const change = (field, value) => ({
+export const change = (field: string, value: string) => ({
   type: actions.change,
   field,
   value,

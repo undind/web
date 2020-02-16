@@ -7,14 +7,19 @@ import { Button } from '@ui/button'
 import { RouteLink } from '@ui/link'
 import messages from '../../messages'
 
+interface IErrors {
+  email?: string,
+  password?: string 
+}
+
 interface Props {
   intl: InjectedIntl,
   email: string,
-  errors: any,
   password: string,
-  onChangeEmail: any,
-  onChangePassword: any,
-  onLogin: any,
+  errors: IErrors,
+  onChangeEmail: (value: string) => void,
+  onChangePassword: (value: string) => void,
+  onLogin: () => void
 }
 
 const Login: FC<Props> = ({
@@ -45,7 +50,7 @@ const Login: FC<Props> = ({
         <Input
           type='email'
           border='lightGray'
-          error={errors.email}
+          error={!!errors.email}
           value={email}
           onChange={onChangeEmail}
           placeholder={intl.formatMessage(messages.enterEmail)}
@@ -66,7 +71,7 @@ const Login: FC<Props> = ({
         <Input
           type='password'
           border='lightGray'
-          error={errors.password}
+          error={!!errors.password}
           value={password}
           onEnter={onLogin}
           onChange={onChangePassword}

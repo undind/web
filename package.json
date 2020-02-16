@@ -4,7 +4,7 @@
   "scripts": {
     "gateway:dev": "yarn workspace @backend/gateway dev",
     "typecheck": "lerna run typecheck",
-    "lint": "tslint --project tsconfig.json -c tslint.json -t codeFrame backend/**/*.ts",
+    "lint": "tslint --project tsconfig.json -c tslint.json -t codeFrame frontend/**/*.ts",
     "dev": "lerna run dev --parallel"
   },
   "devDependencies": {

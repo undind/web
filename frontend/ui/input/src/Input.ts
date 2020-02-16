@@ -11,6 +11,7 @@ export interface InputElementProps {
   warning?: boolean
   transparent?: boolean
   select?: boolean
+  border?: string
 }
 
 export interface InputProps extends InputElementProps {
@@ -135,7 +136,7 @@ const Input = ({
 Input.defaultProps = {
   color: 'blueBayoux',
   borderColor: 'lightGray',
-  onChange: () => {},
+  onChange: () => { },
 }
 
 export default Input
