@@ -9,8 +9,8 @@ export default connect(
     errors: state.auth.login.errors,
   }),
   dispatch => ({
-    onChangeEmail: value => dispatch(change('email', value)),
-    onChangePassword: value => dispatch(change('password', value)),
+    onChangeEmail: (value: string) => dispatch(change('email', value)),
+    onChangePassword: (value: string) => dispatch(change('password', value)),
     onLogin: () => dispatch(login()),
   })
 )(Login)
