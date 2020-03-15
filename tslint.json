@@ -11,5 +11,8 @@
     "no-implicit-dependencies": false,
     "interface-name": false,
     "arrow-parens": [true, "ban-single-arg-parens"]
+  },
+  "linterOptions": {
+    "exclude": ["**/node_modules/**/*"]
   }
 }

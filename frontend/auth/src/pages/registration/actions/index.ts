@@ -7,6 +7,11 @@ export const change = (field, value) => ({
   value,
 })
 
+export const setError = (errors: string) => ({
+  type: actions.setErrors,
+  errors
+})
+
 export const register = () => async (dispatch, getState, client) => {
   const { email, password } = getState().auth.registration
 
@@ -36,6 +41,9 @@ export const register = () => async (dispatch, getState, client) => {
         errors: data.register.errors,
       })
     } else {
+
+      dispatch(loginActions.login());
+
       dispatch({
         type: actions.clear,
       })

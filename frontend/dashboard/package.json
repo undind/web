@@ -4,7 +4,7 @@
   "main": "src/index.ts",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server --config=./config/webpack/dev.ts --hot --history-api-fallback --disable-host-check --host=127.0.0.1 --port=3000",
+    "dev": "webpack-dev-server --config=./config/webpack/dev.ts --hot --history-api-fallback --disable-host-check --host=localhost --port=3000 --open",
     "build": "webpack --config=./config/webpack/build.ts --progress --display=minimal"
   },
   "devDependencies": {

@@ -9,6 +9,12 @@ export const change = (field: string, value: string) => ({
   value,
 })
 
+export const setError = (errors: string) => ({
+  type: actions.setErrors,
+  errors
+})
+
+
 export const login = () => async (dispatch, getState, client) => {
   const { email, password } = getState().auth.login
 
@@ -34,6 +40,16 @@ export const login = () => async (dispatch, getState, client) => {
         password,
       },
     })
+
+    if (data.login.errors) {
+      dispatch(setError(data.login.errors))
+    } else {
+      dispatch({
+        type: auth,
+        // ...stub,
+        ...data.login.token,
+      })
+    }
   } catch (e) {
     dispatch({
       type: auth,

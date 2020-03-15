@@ -12,6 +12,7 @@ export interface InputElementProps {
   transparent?: boolean
   select?: boolean
   border?: string
+  theme?: any
 }
 
 export interface InputProps extends InputElementProps {
